@@ -31,6 +31,7 @@ while start_program == True:
     geo_target_unknown = True
     while geo_target_unknown == True:
         geo_target = input("\nIs the website targetting users on a local, national or international level?\nType 'local', 'national', or 'international.' ")
+        geo_target = geo_target.lower()
         geo = print("\nThe website has a " + geo_target + " focus.\n")
         if geo_target == "local" or geo_target == "national":
             geo
@@ -57,6 +58,7 @@ while start_program == True:
     blog_check = True
     while blog_check == True:
         blog = input("Does the site have a blog that is regularly updated with good content? ")
+        blog = blog.lower()
         if blog == "yes" or blog == "no":
             break
         else:
@@ -99,7 +101,7 @@ while start_program == True:
                     action_value = last_year_visitors+(target_keyword_volume*0.01)
                     break
                 elif action_choice == 8:
-                    action_value = (target_keyword_volume*12)*0.17
+                    action_value = (target_keyword_volume*12)*0.019
                     break
                 else:
                     action_value = last_year_visitors*0.02
@@ -118,6 +120,7 @@ while start_program == True:
         ask_to_run_again_same_data = True
         while ask_to_run_again_same_data == True:
             again_same = input("Do you want to see the impact of a different SEO task using the same information you entered above? ")
+            again_same = again_same.lower()
             if again_same == "yes" or again_same == "no":
                 break
             else:
@@ -134,6 +137,7 @@ while start_program == True:
     while ask_to_run_again == True:
         print()
         again = input("Do you want to restart the program? ")
+        again = again.lower()
         if again == "yes" or again == "no":
             break
         else:
